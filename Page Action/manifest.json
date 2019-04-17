@@ -1,0 +1,25 @@
+{
+    "manifest_version":2,
+    "name":"PageFontStyle Extesnion",
+    "version":"1.0",
+    "description":"Changes font style on a specific page.",
+    "page_action":{
+        "default_popup":"popup.html",
+        "deafult_title":"PageFontStyle"
+    },
+    "background":{
+        "scripts":["eventPage.js"],
+        "persistent":false
+    },
+    "content_scripts":[
+        {
+            "matches":["https://developer.chrome.com/*"],
+            "js":["content.js"]
+        }
+
+    ],
+    "permissions":[
+        "tabs"
+    ]
+
+}
